@@ -1,6 +1,6 @@
 import pytest
 from datetime import datetime
-from src.game_state import GameState
+from game_state import GameState
 
 
 def test_initial_state():

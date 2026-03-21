@@ -1,9 +1,9 @@
 import flet as ft
-from src.theme import (
+from theme import (
     SURFACE, ELEVATED, BORDER_SUBTLE, BORDER,
     TEXT, TEXT_DIM, TEXT_FAINT,
 )
-from src.game_state import GameState
+from game_state import GameState
 
 
 class NotesPanel(ft.Container):

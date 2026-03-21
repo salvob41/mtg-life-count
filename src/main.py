@@ -1,14 +1,14 @@
 import os
 
 import flet as ft
-from src.theme import (
+from theme import (
     BG, ELEVATED, BORDER_SUBTLE,
     TEXT_DIM, DANGER, CENTER,
 )
-from src.game_state import GameState
-from src.player_panel import PlayerPanel
-from src.turn_bar import TurnBar
-from src.notes_panel import NotesPanel
+from game_state import GameState
+from player_panel import PlayerPanel
+from turn_bar import TurnBar
+from notes_panel import NotesPanel
 
 
 def main(page: ft.Page):

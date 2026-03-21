@@ -2,13 +2,13 @@ import asyncio
 from datetime import datetime
 
 import flet as ft
-from src.theme import (
+from theme import (
     STARTING_LIFE, DEBOUNCE_SECONDS,
     SURFACE, ELEVATED, BORDER, BORDER_SUBTLE,
     TEXT, TEXT_DIM, TEXT_FAINT, THEMES, CENTER,
 )
-from src.game_state import GameState
-from src.life_log import LifeLog
+from game_state import GameState
+from life_log import LifeLog
 
 
 class PlayerPanel(ft.Container):

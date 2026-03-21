@@ -21,6 +21,9 @@ path = "src"
 split_per_abi = true
 permissions = ["android.permission.WAKE_LOCK"]
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
 [dependency-groups]
 dev = [
     "pytest>=9.0.2",

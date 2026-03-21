@@ -1,6 +1,6 @@
 import flet as ft
-from src.theme import TEXT, THEMES, CENTER
-from src.game_state import GameState
+from theme import TEXT, THEMES, CENTER
+from game_state import GameState
 
 
 class TurnBar(ft.Container):
