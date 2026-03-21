@@ -34,3 +34,4 @@ Gli artefatti vengono generati nella cartella `build/`.
 ```bash
 FLET_WEB=1 uv run flet run src/main.py
 ```
+# mtg-life-count
