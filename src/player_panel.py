@@ -64,6 +64,8 @@ class PlayerPanel(ft.Container):
         self.name_field.focus()
 
     def _finish_rename(self):
+        if not self.name_field.visible:
+            return
         new_name = (self.name_field.value or "").strip()
         if new_name:
             self.game_state.player_names[self.player_number - 1] = new_name
@@ -251,7 +253,9 @@ class PlayerPanel(ft.Container):
         self.life_display.value = str(self.life)
         self.pending_display.value = ""
         self.pending_display.opacity = 0
+        self.player_label.value = self.game_state.player_names[self.player_number - 1].upper()
         self.life_log.rebuild(self.history)
         self.life_display.update()
         self.pending_display.update()
+        self.player_label.update()
         self.life_log.update()

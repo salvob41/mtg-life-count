@@ -2,8 +2,8 @@ import os
 
 import flet as ft
 from src.theme import (
-    BG, SURFACE, ELEVATED, BORDER_SUBTLE,
-    TEXT_DIM, TEXT_FAINT, DANGER, THEMES, CENTER,
+    BG, ELEVATED, BORDER_SUBTLE,
+    TEXT_DIM, DANGER, CENTER,
 )
 from src.game_state import GameState
 from src.player_panel import PlayerPanel

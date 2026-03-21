@@ -1,5 +1,5 @@
 import flet as ft
-from src.theme import SURFACE, BORDER_SUBTLE, TEXT_DIM, TEXT_FAINT, THEMES
+from src.theme import SURFACE, BORDER_SUBTLE, TEXT_FAINT, THEMES
 
 
 class LifeLog(ft.Column):

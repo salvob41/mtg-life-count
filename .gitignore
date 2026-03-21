@@ -15,3 +15,6 @@ build/
 # Android signing
 *.jks
 *.keystore
+
+# Superpowers brainstorm artifacts
+.superpowers/

@@ -1,3 +1,4 @@
+import pytest
 from datetime import datetime
 from src.game_state import GameState
 
@@ -61,3 +62,11 @@ def test_rename_player():
     gs = GameState()
     gs.player_names[0] = "Alice"
     assert gs.get_active_name() == "Alice"
+
+
+def test_set_active_invalid_player_number():
+    gs = GameState()
+    with pytest.raises(ValueError):
+        gs.set_active(0)
+    with pytest.raises(ValueError):
+        gs.set_active(3)

@@ -1,8 +1,5 @@
 import flet as ft
-from src.theme import (
-    SURFACE, ELEVATED, BORDER, BORDER_SUBTLE,
-    TEXT, TEXT_DIM, TEXT_FAINT, THEMES, CENTER,
-)
+from src.theme import TEXT, THEMES, CENTER
 from src.game_state import GameState
 
 

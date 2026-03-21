@@ -22,6 +22,8 @@ class GameState:
         self.turn += 1
 
     def set_active(self, player_number: int):
+        if player_number not in (1, 2):
+            raise ValueError(f"Invalid player number: {player_number}")
         self.active_player = player_number
 
     def add_note(self, text: str):
