@@ -20,3 +20,8 @@ path = "src"
 [tool.flet.android]
 split_per_abi = true
 permissions = ["android.permission.WAKE_LOCK"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
