@@ -1,0 +1,22 @@
+[project]
+name = "mtg-life-counter"
+version = "0.1.0"
+description = "MTG Life Counter - Track life totals for two-player Magic: The Gathering games"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flet>=0.80.5",
+]
+
+[tool.flet]
+org = "com.mtglifecounter"
+product = "MTG Life Counter"
+company = "MTG Life Counter"
+copyright = "Copyright (C) 2026"
+
+[tool.flet.app]
+path = "src"
+
+[tool.flet.android]
+split_per_abi = true
+permissions = ["android.permission.WAKE_LOCK"]
