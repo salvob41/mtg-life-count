@@ -37,13 +37,12 @@ class StartingScreen(ft.Container):
         self.header_text = ft.Text(
             "WHO GOES FIRST?", size=14, weight=ft.FontWeight.W_900,
             color=TEXT_DIM, text_align=ft.TextAlign.CENTER,
-            letter_spacing=2,
         )
 
         self.p1_name = ft.Text(
             game_state.player_names[0].upper(), size=16,
             weight=ft.FontWeight.W_900, color=THEMES[1]["accent"],
-            text_align=ft.TextAlign.CENTER, letter_spacing=1,
+            text_align=ft.TextAlign.CENTER,
         )
         self.p1_roll_text = ft.Text(
             "", size=48, weight=ft.FontWeight.W_900,
@@ -56,13 +55,13 @@ class StartingScreen(ft.Container):
         self.p1_winner_label = ft.Text(
             "WINNER", size=12, weight=ft.FontWeight.W_700,
             color=THEMES[1]["accent"], text_align=ft.TextAlign.CENTER,
-            letter_spacing=1, visible=False,
+            visible=False,
         )
 
         self.p2_name = ft.Text(
             game_state.player_names[1].upper(), size=16,
             weight=ft.FontWeight.W_900, color=THEMES[2]["accent"],
-            text_align=ft.TextAlign.CENTER, letter_spacing=1,
+            text_align=ft.TextAlign.CENTER,
         )
         self.p2_roll_text = ft.Text(
             "", size=48, weight=ft.FontWeight.W_900,
@@ -75,7 +74,7 @@ class StartingScreen(ft.Container):
         self.p2_winner_label = ft.Text(
             "WINNER", size=12, weight=ft.FontWeight.W_700,
             color=THEMES[2]["accent"], text_align=ft.TextAlign.CENTER,
-            letter_spacing=1, visible=False,
+            visible=False,
         )
 
         self.vs_text = ft.Text(
