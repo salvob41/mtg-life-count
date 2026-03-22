@@ -20,8 +20,7 @@ class NotesPanel(ft.Container):
         )
         self.notes_scroll = ft.Container(
             content=self.notes_list,
-            max_height=120,
-            expand=True,
+            height=120,
         )
 
         self.input_field = ft.TextField(
