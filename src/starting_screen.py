@@ -230,6 +230,9 @@ class StartingScreen(ft.Container):
 
     def show(self):
         """Reset overlay to idle and make visible."""
+        if self._roll_task:
+            self._roll_task.cancel()
+            self._roll_task = None
         self.state = "idle"
         self.roll_1 = 0
         self.roll_2 = 0
