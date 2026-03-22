@@ -73,7 +73,7 @@ The overlay calls `gs.set_active(player_number)` — no new state needed.
 
 ## Visual Design
 
-- Full dark background (#1a1a2e) matching app theme
+- Full dark background using `BG` constant from `theme.py`
 - Player names use existing accent colors from `theme.py`
 - D20 button: dark gradient background, rounded corners, bold "D20" text
 - Winner highlight: subtle accent-colored background glow (rgba overlay)
@@ -83,7 +83,7 @@ The overlay calls `gs.set_active(player_number)` — no new state needed.
 ## Animation Details
 
 - **Rolling:** `asyncio.sleep(0.1)` loop, 10 iterations, random numbers 1-20 displayed on each side
-- **Landing:** Final numbers appear, ~300ms pause, then winner treatment fades in
+- **Landing:** Final numbers appear, 300ms `asyncio.sleep` pause, then winner highlight applied immediately (no fade — Flet doesn't support CSS transitions)
 - **No 3D rendering** — numbers only, keeps it simple and performant in Flet
 
 ## Edge Cases
@@ -91,3 +91,5 @@ The overlay calls `gs.set_active(player_number)` — no new state needed.
 - Player names may have been renamed (long-press feature) — overlay reads from `game_state.player_names`
 - Reset during a game re-shows overlay with current player names
 - Rapid taps during rolling animation are ignored (state guard)
+- Taps on loser's side in RESULT state are ignored — only winner's side dismisses
+- Overlay uses opaque background to prevent tap-through to game layout beneath
