@@ -9,6 +9,7 @@ from game_state import GameState
 from player_panel import PlayerPanel
 from turn_bar import TurnBar
 from notes_panel import NotesPanel
+from starting_screen import StartingScreen
 
 
 def main(page: ft.Page):
@@ -59,12 +60,21 @@ def _main(page: ft.Page):
     # Turn bar
     turn_bar = TurnBar(gs, on_pass_turn=on_pass_turn)
 
+    # Starting screen overlay
+    def on_start(player_number: int):
+        gs.set_active(player_number)
+        update_active_highlight()
+        starting_screen.hide()
+
+    starting_screen = StartingScreen(gs, on_start=on_start)
+
     # Reset
     def on_reset(e=None):
         gs.reset()
         p1.reset()
         p2.reset()
         update_active_highlight()
+        starting_screen.show()
 
     # Flip opponent
     def on_flip(e=None):
@@ -104,7 +114,13 @@ def _main(page: ft.Page):
         expand=True, spacing=8,
     )
 
-    page.add(ft.SafeArea(content=layout, expand=True))
+    page.add(ft.SafeArea(
+        content=ft.Stack(
+            [layout, starting_screen],
+            expand=True,
+        ),
+        expand=True,
+    ))
     page.update()
     update_active_highlight()
 
