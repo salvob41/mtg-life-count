@@ -1,5 +1,5 @@
 import random
-from starting_screen import roll_d20_pair
+from starting_screen import roll_d20_pair, determine_winner
 
 
 def test_roll_d20_pair_returns_two_ints():
@@ -21,3 +21,15 @@ def test_roll_d20_pair_deterministic_with_seed():
     random.seed(42)
     b1, b2 = roll_d20_pair()
     assert (a1, a2) == (b1, b2)
+
+
+def test_determine_winner_player1_wins():
+    assert determine_winner(15, 8) == 1
+
+
+def test_determine_winner_player2_wins():
+    assert determine_winner(3, 17) == 2
+
+
+def test_determine_winner_tie():
+    assert determine_winner(10, 10) == 0
